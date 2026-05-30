@@ -86,10 +86,17 @@ function applyTheme(theme) {
   const isDark = theme === "dark";
 
   document.documentElement.dataset.theme = theme;
-  themeToggle.setAttribute("aria-pressed", String(isDark));
-  themeIcon.textContent = isDark ? "☀️" : "🌙";
-  themeText.textContent = isDark ? "浅色" : "深色";
-  themeToggle.setAttribute("aria-label", isDark ? "切换浅色模式" : "切换深色模式");
+  themeToggle?.setAttribute("aria-pressed", String(isDark));
+
+  if (themeIcon) {
+    themeIcon.textContent = isDark ? "☀️" : "🌙";
+  }
+
+  if (themeText) {
+    themeText.textContent = isDark ? "浅色" : "深色";
+  }
+
+  themeToggle?.setAttribute("aria-label", isDark ? "切换浅色模式" : "切换深色模式");
   localStorage.setItem("cloudshop-theme", theme);
 }
 
@@ -117,10 +124,10 @@ function setupScrollReveal() {
 }
 
 function updateBackToTopVisibility() {
-  backToTop.classList.toggle("show", window.scrollY > 420);
+  backToTop?.classList.toggle("show", window.scrollY > 420);
 }
 
-productGrid.addEventListener("click", (event) => {
+document.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-product]");
 
   if (!button) {
@@ -130,12 +137,12 @@ productGrid.addEventListener("click", (event) => {
   showToast(`已选择 ${button.dataset.product}，请联系客服完成购买。`);
 });
 
-themeToggle.addEventListener("click", () => {
+themeToggle?.addEventListener("click", () => {
   const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
   applyTheme(nextTheme);
 });
 
-backToTop.addEventListener("click", () => {
+backToTop?.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 

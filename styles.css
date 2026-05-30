@@ -388,9 +388,162 @@ a {
 
 .product-card .btn {
   width: 100%;
+<<<<<<< codex/create-homepage-for-cloudshop-6gz9zc
+}
+
+
+.product-actions {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 10px;
   margin-top: auto;
 }
 
+.detail-page {
+  padding-bottom: 72px;
+}
+
+.detail-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+  gap: 36px;
+  align-items: stretch;
+  padding: 72px 0 42px;
+}
+
+.detail-copy,
+.detail-panel,
+.detail-card {
+  border: 1px solid var(--border);
+  background: var(--surface-alpha);
+  box-shadow: var(--card-shadow);
+}
+
+.detail-copy {
+  padding: clamp(28px, 5vw, 48px);
+  border-radius: 36px;
+}
+
+.detail-copy h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 4.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.back-home-link {
+  margin-bottom: 28px;
+}
+
+.detail-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 34px;
+  border-radius: 32px;
+}
+
+.detail-icon {
+  width: 82px;
+  height: 82px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+  font-size: 2.4rem;
+  border-radius: 26px;
+  background: linear-gradient(135deg, var(--surface-soft), rgba(20, 184, 166, 0.18));
+}
+
+.detail-panel span,
+.detail-card-label {
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.detail-panel strong {
+  display: block;
+  margin: 10px 0 14px;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.detail-panel p,
+.detail-card p,
+.detail-card li,
+.faq-item p {
+  color: var(--muted);
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.detail-card {
+  padding: 28px;
+  border-radius: var(--radius);
+}
+
+.detail-card-wide {
+  grid-column: 1 / -1;
+}
+
+.detail-card h2 {
+  margin: 8px 0 16px;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.detail-card p {
+  margin: 0 0 12px;
+}
+
+.check-list,
+.steps-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.check-list li,
+.steps-list li {
+  margin: 10px 0;
+}
+
+.steps-list li::marker {
+  color: var(--primary);
+  font-weight: 900;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+}
+
+.faq-item {
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface-alpha);
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.faq-item p {
+  margin: 12px 0 0;
+}
+
+=======
+  margin-top: auto;
+}
+
+>>>>>>> main
 .features {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -543,7 +696,12 @@ a {
     justify-content: space-between;
   }
 
+<<<<<<< codex/create-homepage-for-cloudshop-6gz9zc
+  .hero,
+  .detail-hero {
+=======
   .hero {
+>>>>>>> main
     grid-template-columns: 1fr;
     padding-top: 58px;
   }
@@ -553,7 +711,12 @@ a {
   }
 
   .product-grid,
+<<<<<<< codex/create-homepage-for-cloudshop-6gz9zc
+  .features,
+  .detail-layout {
+=======
   .features {
+>>>>>>> main
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -617,12 +780,22 @@ a {
     clip: rect(0 0 0 0);
   }
 
+<<<<<<< codex/create-homepage-for-cloudshop-6gz9zc
+  .hero,
+  .detail-hero {
+=======
   .hero {
+>>>>>>> main
     gap: 32px;
     padding: 42px 0 52px;
   }
 
+<<<<<<< codex/create-homepage-for-cloudshop-6gz9zc
+  .hero h1,
+  .detail-copy h1 {
+=======
   .hero h1 {
+>>>>>>> main
     font-size: clamp(2.35rem, 14vw, 3.4rem);
   }
 
@@ -667,10 +840,32 @@ a {
   }
 
   .product-grid,
+<<<<<<< codex/create-homepage-for-cloudshop-6gz9zc
+  .features,
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-card-wide {
+    grid-column: auto;
+  }
+
+  .product-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-copy,
+  .detail-panel,
+  .detail-card {
+    border-radius: 22px;
+  }
+
+=======
   .features {
     grid-template-columns: 1fr;
   }
 
+>>>>>>> main
   .product-card {
     min-height: auto;
     padding: 22px;
