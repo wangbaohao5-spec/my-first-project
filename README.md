@@ -16,12 +16,8 @@ CloudShop 是一个使用纯 HTML、CSS、JavaScript 实现的虚拟商品销售
 ├── .github/workflows/pages.yml  # GitHub Pages Actions 部署工作流
 ├── .nojekyll                    # 禁用 Jekyll 处理，直接发布静态文件
 ├── index.html                   # 网站首页
-├── gpt-account.html             # GPT账号详情页
-├── spotify.html                 # Spotify会员详情页
-├── netflix.html                 # Netflix会员详情页
-├── vpn.html                     # VPN服务详情页
 ├── styles.css                   # 页面样式
-├── script.js                    # 商品渲染、主题切换与交互
+├── script.js                    # 商品渲染与购买按钮交互
 └── README.md                    # 项目说明与部署方法
 ```
 

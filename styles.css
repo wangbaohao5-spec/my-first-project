@@ -388,6 +388,7 @@ a {
 
 .product-card .btn {
   width: 100%;
+<<<<<<< codex/create-homepage-for-cloudshop-6gz9zc
 }
 
 
@@ -538,6 +539,11 @@ a {
   margin: 12px 0 0;
 }
 
+=======
+  margin-top: auto;
+}
+
+>>>>>>> main
 .features {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -690,8 +696,12 @@ a {
     justify-content: space-between;
   }
 
+<<<<<<< codex/create-homepage-for-cloudshop-6gz9zc
   .hero,
   .detail-hero {
+=======
+  .hero {
+>>>>>>> main
     grid-template-columns: 1fr;
     padding-top: 58px;
   }
@@ -701,8 +711,12 @@ a {
   }
 
   .product-grid,
+<<<<<<< codex/create-homepage-for-cloudshop-6gz9zc
   .features,
   .detail-layout {
+=======
+  .features {
+>>>>>>> main
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -766,14 +780,22 @@ a {
     clip: rect(0 0 0 0);
   }
 
+<<<<<<< codex/create-homepage-for-cloudshop-6gz9zc
   .hero,
   .detail-hero {
+=======
+  .hero {
+>>>>>>> main
     gap: 32px;
     padding: 42px 0 52px;
   }
 
+<<<<<<< codex/create-homepage-for-cloudshop-6gz9zc
   .hero h1,
   .detail-copy h1 {
+=======
+  .hero h1 {
+>>>>>>> main
     font-size: clamp(2.35rem, 14vw, 3.4rem);
   }
 
@@ -818,6 +840,7 @@ a {
   }
 
   .product-grid,
+<<<<<<< codex/create-homepage-for-cloudshop-6gz9zc
   .features,
   .detail-layout {
     grid-template-columns: 1fr;
@@ -837,6 +860,12 @@ a {
     border-radius: 22px;
   }
 
+=======
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+>>>>>>> main
   .product-card {
     min-height: auto;
     padding: 22px;
