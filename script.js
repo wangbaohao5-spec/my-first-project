@@ -31,13 +31,17 @@ const products = [
 
 const productGrid = document.querySelector("#productGrid");
 const toast = document.querySelector("#toast");
+const themeToggle = document.querySelector("#themeToggle");
+const themeIcon = themeToggle.querySelector(".theme-icon");
+const themeText = themeToggle.querySelector(".theme-text");
+const backToTop = document.querySelector("#backToTop");
 let toastTimer;
 
 function renderProducts() {
   productGrid.innerHTML = products
     .map(
-      (product) => `
-        <article class="product-card">
+      (product, index) => `
+        <article class="product-card reveal" style="transition-delay: ${index * 0.08}s">
           <div class="product-icon" aria-hidden="true">${product.icon}</div>
           <h3>${product.name}</h3>
           <p>${product.description}</p>
@@ -68,6 +72,54 @@ function showToast(message) {
   }, 2400);
 }
 
+function getPreferredTheme() {
+  const savedTheme = localStorage.getItem("cloudshop-theme");
+
+  if (savedTheme) {
+    return savedTheme;
+  }
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function applyTheme(theme) {
+  const isDark = theme === "dark";
+
+  document.documentElement.dataset.theme = theme;
+  themeToggle.setAttribute("aria-pressed", String(isDark));
+  themeIcon.textContent = isDark ? "☀️" : "🌙";
+  themeText.textContent = isDark ? "浅色" : "深色";
+  themeToggle.setAttribute("aria-label", isDark ? "切换浅色模式" : "切换深色模式");
+  localStorage.setItem("cloudshop-theme", theme);
+}
+
+function setupScrollReveal() {
+  const revealElements = document.querySelectorAll(".reveal");
+
+  if (!("IntersectionObserver" in window)) {
+    revealElements.forEach((element) => element.classList.add("revealed"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.14 },
+  );
+
+  revealElements.forEach((element) => observer.observe(element));
+}
+
+function updateBackToTopVisibility() {
+  backToTop.classList.toggle("show", window.scrollY > 420);
+}
+
 productGrid.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-product]");
 
@@ -78,4 +130,18 @@ productGrid.addEventListener("click", (event) => {
   showToast(`已选择 ${button.dataset.product}，请联系客服完成购买。`);
 });
 
+themeToggle.addEventListener("click", () => {
+  const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  applyTheme(nextTheme);
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+
+applyTheme(getPreferredTheme());
 renderProducts();
+setupScrollReveal();
+updateBackToTopVisibility();

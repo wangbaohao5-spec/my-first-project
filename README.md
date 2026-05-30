@@ -7,7 +7,7 @@ CloudShop 是一个使用纯 HTML、CSS、JavaScript 实现的虚拟商品销售
 - Netflix会员
 - VPN服务
 
-项目已按 GitHub Pages 静态站点部署方式配置，根目录中的 `index.html` 会作为网站首页加载，`styles.css` 与 `script.js` 使用相对路径引用，适合部署在 `https://<用户名>.github.io/<仓库名>/` 这类项目站点路径下。
+项目已按 GitHub Pages 静态站点部署方式配置，根目录中的 `index.html` 会作为网站首页加载，`styles.css` 与 `script.js` 使用相对路径引用，适合部署在 `https://<用户名>.github.io/<仓库名>/` 这类项目站点路径下。当前首页支持固定顶部导航、Logo 图标、深色模式、返回顶部按钮、滚动动画和移动端响应式布局。
 
 ## 项目结构
 

@@ -9,21 +9,32 @@
   <body>
     <header class="site-header">
       <nav class="nav container" aria-label="主导航">
-        <a class="brand" href="#" aria-label="CloudShop 首页">
-          <span class="brand-mark">☁</span>
+        <a class="brand" href="#top" aria-label="CloudShop 首页">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img" focusable="false">
+              <path d="M18.8 33.5h15.1a8.1 8.1 0 0 0 1.2-16.1 11.4 11.4 0 0 0-21.7 3.4 6.5 6.5 0 0 0 5.4 12.7Z" />
+              <path d="M17.6 24.1h12.8" />
+            </svg>
+          </span>
           <span>CloudShop</span>
         </a>
-        <div class="nav-links">
-          <a href="#products">商品</a>
-          <a href="#features">优势</a>
-          <a href="#contact">联系</a>
+        <div class="nav-actions">
+          <div class="nav-links">
+            <a href="#products">商品</a>
+            <a href="#features">优势</a>
+            <a href="#contact">联系</a>
+          </div>
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深色模式" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+            <span class="theme-text">深色</span>
+          </button>
         </div>
       </nav>
     </header>
 
-    <main>
+    <main id="top">
       <section class="hero container">
-        <div class="hero-content">
+        <div class="hero-content reveal">
           <p class="eyebrow">数字服务 · 即买即用</p>
           <h1>一站式购买高品质虚拟商品</h1>
           <p class="hero-text">
@@ -35,7 +46,7 @@
             <a class="btn btn-ghost" href="#features">查看优势</a>
           </div>
         </div>
-        <div class="hero-card" aria-label="CloudShop 服务概览">
+        <div class="hero-card reveal reveal-delay" aria-label="CloudShop 服务概览">
           <div class="stat-card">
             <strong>4+</strong>
             <span>热门虚拟商品</span>
@@ -47,7 +58,7 @@
 
       <section id="products" class="products-section">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading reveal">
             <p class="eyebrow">精选商品</p>
             <h2>选择你的数字服务</h2>
             <p>清晰的商品卡片、价格与购买按钮，支持电脑与手机端浏览。</p>
@@ -57,18 +68,18 @@
         </div>
       </section>
 
-      <section id="features" class="features container">
-        <article>
+      <section id="features" class="features container reveal-group">
+        <article class="reveal">
           <span class="feature-icon">⚡</span>
           <h3>快速开通</h3>
           <p>购买后可根据订单信息快速完成服务交付与使用。</p>
         </article>
-        <article>
+        <article class="reveal">
           <span class="feature-icon">🛡️</span>
           <h3>可靠服务</h3>
           <p>商品信息透明展示，便于用户按需选择合适套餐。</p>
         </article>
-        <article>
+        <article class="reveal">
           <span class="feature-icon">📱</span>
           <h3>多端适配</h3>
           <p>响应式页面布局，手机、平板、电脑都能获得良好体验。</p>
@@ -83,6 +94,7 @@
       </div>
     </footer>
 
+    <button class="back-to-top" id="backToTop" type="button" aria-label="返回顶部">↑</button>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script src="./script.js"></script>
