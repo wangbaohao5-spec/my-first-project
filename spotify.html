@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify会员 - CloudShop 商品详情</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="主导航">
+        <a class="brand" href="./index.html#top" aria-label="CloudShop 首页">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img" focusable="false">
+              <path d="M18.8 33.5h15.1a8.1 8.1 0 0 0 1.2-16.1 11.4 11.4 0 0 0-21.7 3.4 6.5 6.5 0 0 0 5.4 12.7Z" />
+              <path d="M17.6 24.1h12.8" />
+            </svg>
+          </span>
+          <span>CloudShop</span>
+        </a>
+        <div class="nav-actions">
+          <div class="nav-links">
+            <a href="./index.html#products">商品</a>
+            <a href="./index.html#features">优势</a>
+            <a href="#contact">联系</a>
+          </div>
+          <a class="cart-link" href="./cart.html" aria-label="查看购物车">
+            🛒 <span>购物车</span><strong id="cartCount">0</strong>
+          </a>
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深色模式" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+            <span class="theme-text">深色</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top" class="detail-page">
+      <section class="detail-hero container">
+        <div class="detail-copy reveal">
+          <a class="btn btn-ghost back-home-link" href="./index.html">← 返回首页</a>
+          <p class="eyebrow">商品详情</p>
+          <h1>Spotify会员</h1>
+          <p class="hero-text">畅听音乐、播客与歌单的会员权益服务。</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" data-product="Spotify会员">立即购买</button>
+            <a class="btn btn-ghost" href="#faq">查看 FAQ</a>
+          </div>
+        </div>
+        <aside class="detail-panel reveal reveal-delay" aria-label="Spotify会员 价格概览">
+          <div class="detail-icon" aria-hidden="true">🎧</div>
+          <span>当前套餐</span>
+          <strong>¥25 / 月</strong>
+          <p>支持购买前确认套餐细节、交付方式与售后说明。</p>
+        </aside>
+      </section>
+
+      <section class="detail-layout container">
+        <article class="detail-card reveal">
+          <span class="detail-card-label">介绍</span>
+          <h2>商品介绍</h2>
+              <p>适合希望获得更纯净收听体验、管理个人歌单和探索全球音乐内容的用户。</p>
+              <p>页面提供套餐、使用步骤和常见问题，方便你在购买前快速了解服务。</p>
+        </article>
+
+        <article class="detail-card reveal">
+          <span class="detail-card-label">价格</span>
+          <h2>价格说明</h2>
+          <ul class="check-list">
+              <li>月付套餐：¥25 / 月，适合日常音乐收听。</li>
+              <li>支持按月购买与续费，具体账号类型和地区以客服确认为准。</li>
+              <li>价格为页面示例展示，最终成交价以客服确认为准。</li>
+          </ul>
+        </article>
+
+        <article class="detail-card detail-card-wide reveal">
+          <span class="detail-card-label">教程</span>
+          <h2>使用说明</h2>
+          <ol class="steps-list">
+              <li>选择 Spotify会员 并点击“立即购买”。</li>
+              <li>联系客服确认账号绑定方式、会员周期和交付时间。</li>
+              <li>按照交付说明登录或加入对应会员方案。</li>
+              <li>使用期间如出现会员状态异常，请及时联系售后。</li>
+          </ol>
+        </article>
+
+        <article id="faq" class="detail-card detail-card-wide reveal">
+          <span class="detail-card-label">FAQ</span>
+          <h2>常见问题</h2>
+          <div class="faq-list">
+            <details class="faq-item reveal">
+              <summary>是否支持手机和电脑？</summary>
+              <p>Spotify 可在多端使用，实际可用设备与功能以官方客户端和账号状态为准。</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>会员到期后怎么办？</summary>
+              <p>可在到期前联系客服续费，避免影响正常使用。</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>可以更换账号吗？</summary>
+              <p>是否支持更换取决于套餐类型和订单状态，购买前请先确认。</p>
+            </details>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-content">
+        <p>© 2026 CloudShop. 专注虚拟商品销售。</p>
+        <a href="mailto:support@cloudshop.example">support@cloudshop.example</a>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="返回顶部">↑</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

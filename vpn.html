@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VPN服务 - CloudShop 商品详情</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="主导航">
+        <a class="brand" href="./index.html#top" aria-label="CloudShop 首页">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img" focusable="false">
+              <path d="M18.8 33.5h15.1a8.1 8.1 0 0 0 1.2-16.1 11.4 11.4 0 0 0-21.7 3.4 6.5 6.5 0 0 0 5.4 12.7Z" />
+              <path d="M17.6 24.1h12.8" />
+            </svg>
+          </span>
+          <span>CloudShop</span>
+        </a>
+        <div class="nav-actions">
+          <div class="nav-links">
+            <a href="./index.html#products">商品</a>
+            <a href="./index.html#features">优势</a>
+            <a href="#contact">联系</a>
+          </div>
+          <a class="cart-link" href="./cart.html" aria-label="查看购物车">
+            🛒 <span>购物车</span><strong id="cartCount">0</strong>
+          </a>
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深色模式" aria-pressed="false">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+            <span class="theme-text">深色</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top" class="detail-page">
+      <section class="detail-hero container">
+        <div class="detail-copy reveal">
+          <a class="btn btn-ghost back-home-link" href="./index.html">← 返回首页</a>
+          <p class="eyebrow">商品详情</p>
+          <h1>VPN服务</h1>
+          <p class="hero-text">面向多场景网络访问需求的加密连接服务。</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" data-product="VPN服务">立即购买</button>
+            <a class="btn btn-ghost" href="#faq">查看 FAQ</a>
+          </div>
+        </div>
+        <aside class="detail-panel reveal reveal-delay" aria-label="VPN服务 价格概览">
+          <div class="detail-icon" aria-hidden="true">🔐</div>
+          <span>当前套餐</span>
+          <strong>¥29 / 月</strong>
+          <p>支持购买前确认套餐细节、交付方式与售后说明。</p>
+        </aside>
+      </section>
+
+      <section class="detail-layout container">
+        <article class="detail-card reveal">
+          <span class="detail-card-label">介绍</span>
+          <h2>商品介绍</h2>
+              <p>适合需要加密连接、跨设备访问和稳定网络体验的用户。</p>
+              <p>详情页说明套餐费用、安装使用流程与常见问题，帮助你快速完成配置。</p>
+        </article>
+
+        <article class="detail-card reveal">
+          <span class="detail-card-label">价格</span>
+          <h2>价格说明</h2>
+          <ul class="check-list">
+              <li>月付套餐：¥29 / 月，适合短期或轻量使用。</li>
+              <li>可根据设备数量、线路需求和使用周期确认具体套餐。</li>
+              <li>价格为页面示例展示，最终成交价以客服确认为准。</li>
+          </ul>
+        </article>
+
+        <article class="detail-card detail-card-wide reveal">
+          <span class="detail-card-label">教程</span>
+          <h2>使用说明</h2>
+          <ol class="steps-list">
+              <li>点击“立即购买”并联系客服说明设备类型。</li>
+              <li>确认套餐周期、可用线路和客户端安装方式。</li>
+              <li>根据教程下载客户端、导入配置并连接服务。</li>
+              <li>使用期间请遵守所在地法律法规和平台规则。</li>
+          </ol>
+        </article>
+
+        <article id="faq" class="detail-card detail-card-wide reveal">
+          <span class="detail-card-label">FAQ</span>
+          <h2>常见问题</h2>
+          <div class="faq-list">
+            <details class="faq-item reveal">
+              <summary>支持哪些设备？</summary>
+              <p>常见手机、平板和电脑设备通常均可配置，具体以套餐说明为准。</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>连接速度如何？</summary>
+              <p>速度受线路、网络环境、设备性能和使用时段影响，购买前可咨询推荐线路。</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>配置失败怎么办？</summary>
+              <p>请提供设备系统、错误截图和网络环境，客服会协助排查。</p>
+            </details>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-content">
+        <p>© 2026 CloudShop. 专注虚拟商品销售。</p>
+        <a href="mailto:support@cloudshop.example">support@cloudshop.example</a>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="返回顶部">↑</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
