@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudShop - 虚拟商品商城</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="主导航">
+        <a class="brand" href="#" aria-label="CloudShop 首页">
+          <span class="brand-mark">☁</span>
+          <span>CloudShop</span>
+        </a>
+        <div class="nav-links">
+          <a href="#products">商品</a>
+          <a href="#features">优势</a>
+          <a href="#contact">联系</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-content">
+          <p class="eyebrow">数字服务 · 即买即用</p>
+          <h1>一站式购买高品质虚拟商品</h1>
+          <p class="hero-text">
+            CloudShop 提供 GPT账号、Spotify会员、Netflix会员与 VPN服务，
+            采用现代化卡片展示，让你快速找到所需数字权益。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#products">浏览商品</a>
+            <a class="btn btn-ghost" href="#features">查看优势</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="CloudShop 服务概览">
+          <div class="stat-card">
+            <strong>4+</strong>
+            <span>热门虚拟商品</span>
+          </div>
+          <div class="floating-card">安全交付</div>
+          <div class="floating-card secondary">响应迅速</div>
+        </div>
+      </section>
+
+      <section id="products" class="products-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">精选商品</p>
+            <h2>选择你的数字服务</h2>
+            <p>清晰的商品卡片、价格与购买按钮，支持电脑与手机端浏览。</p>
+          </div>
+
+          <div class="product-grid" id="productGrid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="features" class="features container">
+        <article>
+          <span class="feature-icon">⚡</span>
+          <h3>快速开通</h3>
+          <p>购买后可根据订单信息快速完成服务交付与使用。</p>
+        </article>
+        <article>
+          <span class="feature-icon">🛡️</span>
+          <h3>可靠服务</h3>
+          <p>商品信息透明展示，便于用户按需选择合适套餐。</p>
+        </article>
+        <article>
+          <span class="feature-icon">📱</span>
+          <h3>多端适配</h3>
+          <p>响应式页面布局，手机、平板、电脑都能获得良好体验。</p>
+        </article>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-content">
+        <p>© 2026 CloudShop. 专注虚拟商品销售。</p>
+        <a href="mailto:support@cloudshop.example">support@cloudshop.example</a>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
